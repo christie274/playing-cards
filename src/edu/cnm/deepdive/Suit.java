@@ -12,10 +12,8 @@ public enum Suit {
         return '\u2662';
       case HEARTS:
         return '\u2661';
-      case SPADES:
-        return '\u2660';
       default:
-        return (char) 0;
+        return '\u2660';
 
     }
   }
