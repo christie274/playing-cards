@@ -8,12 +8,19 @@ package edu.cnm.deepdive;
  */
 public enum Suit {
 
-  CLUBS, DIAMONDS, HEARTS, SPADES;
+  CLUBS(Color.BLACK),
+  DIAMONDS(Color.RED),
+  HEARTS(Color.RED),
+  SPADES(Color.BLACK);
+
+  private final Color color;
+
+  Suit(Color color) {
+    this.color = color;
+  }
 
   /**
    * Returns the <em>Unicode</em> symbol for the current instance.
-   *
-   * @return One of the four symbols: ♠;, ♡;, ♢;, ♣;
    */
   public char symbol() {
     switch (this) {
@@ -29,4 +36,7 @@ public enum Suit {
     }
   }
 
+  public Color getColor() {
+    return color;
   }
+}
